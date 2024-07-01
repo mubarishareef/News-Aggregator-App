@@ -1,7 +1,10 @@
+'use client'
 import React from 'react'
 import { WiDayCloudy } from "react-icons/wi";
+import { useStateContext } from '../../context/stateContext';
 
 const NewsFeed = () => {
+    const {cityAddress}=useStateContext()
   return (
       <section id="posts" class="posts">
           <div class="container" data-aos="fade-up">
@@ -14,8 +17,7 @@ const NewsFeed = () => {
                             <h1>Weather Report</h1>
                             <hr />
                             <div className='reports'>
-                                <h5>Kerala,India</h5>
-                                <h5>28 Mar 2024</h5>
+                                <p>{`${cityAddress?.city},${cityAddress?.state},${cityAddress.country}`}</p>
                             </div>
                             <p>Highest temp : 27°C</p>
                             <p>Lowest temp : 17°C</p>

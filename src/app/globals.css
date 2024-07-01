@@ -494,7 +494,7 @@ a {
   background: none;
   font-size: 16px;
   padding: 0 10px;
-  background: #67b0d1;
+  background-image: linear-gradient(to right, #e7228f, #a165f0);
   color: #fff;
   transition: 0.3s;
   border-radius: 5px;
